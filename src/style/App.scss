@@ -1,0 +1,117 @@
+@import "./index.scss";
+
+.light-mode {
+  background-image: $background;
+  color: black;
+  --font-main: black;
+  --nav-bar: linear-gradient(#a7ff83, #17b978);
+  --button-submit: linear-gradient(#a7ff83, #17b978);
+  --button-submit-hover: linear-gradient(#6dc749, #0a7248);
+  transition: 0.5s;
+}
+.dark-mode {
+  background-image: $background-dark;
+  color: white;
+  --font-main: white;
+  --nav-bar: linear-gradient(rgb(16, 30, 34), black);
+  --button-submit: linear-gradient(rgb(16, 30, 34), black);
+  --button-submit-hover: linear-gradient(#a7ff83, #17b978);
+  transition: 0.5s;
+}
+
+.toggle-dark-mode {
+  position: relative;
+  margin-right: 1.5em;
+}
+.darkMode-checkbox {
+  cursor: pointer;
+  position: relative;
+  width: 3.5em;
+  height: 1.5em;
+
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 2em;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: darkgray;
+  transition: 0.5s;
+}
+.darkMode-checkbox:checked {
+  background: $secondary-color;
+}
+.darkMode-checkbox:before {
+  content: "";
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: white;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.darkMode-checkbox:checked:before {
+  left: 2em;
+}
+.darkmodeicon {
+  top: 0em;
+  margin-bottom: 0em;
+  vertical-align: auto;
+}
+.App {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.App-header {
+  background-color: $background;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.btn {
+  text-shadow: 0px 0px 1px $shadow-color;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  text-align: center;
+  margin: 0.5em 1em 0.5em 1em;
+  cursor: pointer;
+}
+
+.btn-submit {
+  color: var(--font-main);
+  padding-left: 2em;
+  padding-right: 2em;
+  background: var(--button-submit);
+  border: 0.1em;
+  box-shadow: 2px 3px 5px $shadow-color;
+  border-radius: 1em;
+}
+.btn-submit:hover {
+  background: var(--button-submit-hover);
+}
+.btn-default {
+  background: rgba(0, 0, 0, 0);
+  border: 0.1em;
+  color: var(--font-main);
+  border-style: solid;
+  border-color: $secondary-color;
+  box-shadow: 2px 3px 5px $shadow-color;
+  border-radius: 1em;
+}
+.btn:default:hover {
+}

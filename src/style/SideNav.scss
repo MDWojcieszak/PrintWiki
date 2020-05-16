@@ -1,0 +1,57 @@
+@import "./index.scss";
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(#17b978, #086972);
+  width: 290px;
+  height: 98%;
+  border-bottom-right-radius: 2.5em;
+  transition: all 0.5s ease;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.side-nav-text {
+  display: block;
+  background: #ececec;
+  width: 220px;
+  height: 98%;
+  border-bottom-right-radius: 1.5em;
+  box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.16);
+}
+.side-nav-text .logo {
+  margin: auto;
+  height: 140px;
+  width: 100%;
+}
+.side-nav-text .logo > img {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: none;
+}
+
+.side-nav-text span > img {
+  height: 50px;
+  width: 50px;
+  float: right;
+  fill: white;
+}
+
+.side-nav-text ul {
+  margin-left: 0;
+  list-style-type: none;
+  padding: 0;
+  width: 280px;
+  display: block;
+  text-align: center;
+}
+.side-nav-text ul li {
+  height: 5em;
+}
+
+@media screen and (max-width: 800px) {
+  .side-nav {
+    display: none;
+  }
+}
