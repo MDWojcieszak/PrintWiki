@@ -4,6 +4,8 @@
   background-image: $background;
   color: black;
   --font-main: black;
+  --side-nav-background: #ececec;
+  --selected-element: white;
   --nav-bar: linear-gradient(#a7ff83, #17b978);
   --button-submit: linear-gradient(#a7ff83, #17b978);
   --button-submit-hover: linear-gradient(#6dc749, #0a7248);
@@ -13,6 +15,8 @@
   background-image: $background-dark;
   color: white;
   --font-main: white;
+  --side-nav-background: rgb(16, 30, 34);
+  --selected-element: black;
   --nav-bar: linear-gradient(rgb(16, 30, 34), black);
   --button-submit: linear-gradient(rgb(16, 30, 34), black);
   --button-submit-hover: linear-gradient(#a7ff83, #17b978);

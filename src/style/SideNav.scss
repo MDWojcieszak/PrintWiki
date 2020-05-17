@@ -1,11 +1,39 @@
 @import "./index.scss";
 
+.rolled-up {
+  --side-nav-width: 66px;
+  --logo-display: none;
+  --title-display: none;
+}
+.developed {
+  --side-nav-width: 250px;
+  --logo-display: inline;
+  --title-display: inline-block;
+}
+
+@keyframes show {
+  0% {
+    margin-left: -184px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+@keyframes hide {
+  0% {
+    margin-left: 184px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
 .side-nav {
   position: fixed;
   top: 0;
   left: 0;
   background-image: linear-gradient(#17b978, #086972);
-  width: 290px;
+  width: var(--side-nav-width);
   height: 98%;
   border-bottom-right-radius: 2.5em;
   transition: all 0.5s ease;
@@ -14,40 +42,120 @@
 
 .side-nav-text {
   display: block;
-  background: #ececec;
-  width: 220px;
+  background: var(--side-nav-background);
+  width: calc(var(--side-nav-width) - 66px);
   height: 98%;
   border-bottom-right-radius: 1.5em;
   box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.16);
+  user-select: none;
+  transition: all 0.5s ease;
 }
-.side-nav-text .logo {
+.side-nav-text .top {
   margin: auto;
-  height: 140px;
-  width: 100%;
+  display: block;
+  position: relative;
+  width: var(--side-nav-width);
+  height: 100px;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  transition: all 0.5s;
 }
-.side-nav-text .logo > img {
-  height: 100%;
-  width: 100%;
+.side-nav-text .top .logo {
+  display: var(--logo-display);
+  height: 100px;
+  width: 100px;
   -webkit-filter: none;
+  margin: auto;
+  position: relative;
+}
+.developed .side-nav-text .top .logo {
+  animation-name: show;
+  animation-duration: 0.5s;
+}
+
+.side-nav-text .top .bars {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  float: right;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 13px;
+  filter: invert(1);
+  border-radius: 0.5em;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.side-nav-text .top .bars:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .side-nav-text span > img {
   height: 50px;
   width: 50px;
   float: right;
-  fill: white;
+  filter: invert(1);
 }
 
 .side-nav-text ul {
   margin-left: 0;
   list-style-type: none;
   padding: 0;
-  width: 280px;
+  width: var(--side-nav-width);
   display: block;
   text-align: center;
 }
+.developed .side-nav-text ul {
+  animation-name: show;
+  animation-duration: 0.5s;
+}
+
+.rolled-up .side-nav-text ul {
+  animation-name: hide;
+  animation-duration: 0.5s;
+}
+
 .side-nav-text ul li {
-  height: 5em;
+  height: 66px;
+  cursor: pointer;
+}
+
+.side-nav-text ul li .title {
+  display: var(--title-display);
+  vertical-align: middle;
+  line-height: 50px;
+  padding: 0.5em;
+}
+
+.side-nav-text ul li .icon {
+  line-height: 50px;
+  float: right;
+  padding: 0.5em;
+  transform: scale(1.04);
+}
+
+.side-nav-text .selected {
+  cursor: initial;
+  background: var(--selected-element);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  transition: all 0.5s;
+  font-weight: 600;
+}
+.side-nav-text .selected .icon {
+  background: #a7ff83;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+  transition: all 0.5s;
+}
+.side-nav-text .selected .icon > img {
+  filter: invert(0);
+  transition: all 0.5s;
+}
+.side-nav-text .not-selected {
+  transition: 0.5s;
+}
+
+.side-nav-text .not-selected:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 @media screen and (max-width: 800px) {
