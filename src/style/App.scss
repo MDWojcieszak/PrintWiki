@@ -9,6 +9,7 @@
   --nav-bar: linear-gradient(#a7ff83, #17b978);
   --button-submit: linear-gradient(#a7ff83, #17b978);
   --button-submit-hover: linear-gradient(#6dc749, #0a7248);
+  --default-background: white;
   transition: 0.5s;
 }
 .dark-mode {
@@ -20,6 +21,7 @@
   --nav-bar: linear-gradient(rgb(16, 30, 34), black);
   --button-submit: linear-gradient(rgb(16, 30, 34), black);
   --button-submit-hover: linear-gradient(#a7ff83, #17b978);
+  --default-background: black;
   transition: 0.5s;
 }
 
@@ -65,7 +67,8 @@
   vertical-align: auto;
 }
 .App {
-  height: 100%;
+  height: unset;
+  min-height: 100%;
   width: 100%;
   text-align: center;
   margin: auto;
