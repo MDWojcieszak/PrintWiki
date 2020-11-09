@@ -1,0 +1,62 @@
+.input-field-container {
+  position: relative;
+  height: 60px;
+
+  width: 100%;
+  background: blue;
+  padding: 0;
+  margin: 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.input-field-container input {
+  padding: 0;
+  padding-top: 10px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.input-field-container label {
+  text-align: left;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #a7ff83;
+}
+.input-field-container label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 4px solid #17b978;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.input-field-container .content {
+  position: absolute;
+  bottom: 1px;
+  left: 0px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.input-field-container input:focus + .label .content,
+.input-field-container input:valid + .label .content,
+.input-field-container input:hover + .label .content {
+  transform: translateY(-160%);
+  font-size: 14px;
+  color: #17b978;
+}
+.input-field-container input:focus + label::after,
+.input-field-container input:valid + label::after,
+.input-field-container input:hover + label::after {
+  transform: translateX(0%);
+  transition: all 0.3s ease;
+}

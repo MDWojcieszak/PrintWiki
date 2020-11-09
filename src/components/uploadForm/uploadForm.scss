@@ -1,0 +1,55 @@
+.fileContainer {
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  max-height: 200px;
+  max-width: 200px;
+  padding: 0;
+  position: relative;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.upload_image {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  background: white;
+  object-fit: cover;
+}
+.upload_image_container {
+  position: relative;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.change_button {
+  width: 80px;
+  height: 35px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #17b978;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
+  background: white;
+  border: 0.1em;
+  border-style: solid;
+  color: #17b978;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  transition: all 0.3s ease;
+}
+.change_button:hover {
+  background-color: #17b978;
+  transition: all 0.3s ease;
+  color: black;
+}

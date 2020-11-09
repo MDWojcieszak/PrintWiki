@@ -7,6 +7,7 @@ import Printers from "./Views/Printers";
 import PrintersSettings from "./Views/PrintersSettings";
 import Filaments from "./Views/Filaments";
 import FilamentsSettings from "./Views/FilamentsSettings";
+import CreatePrinter from "./Views/CreatePrinter";
 
 function App() {
   const [darkMode, setDarkMode] = React.useState(getInitialMode);
@@ -41,8 +42,11 @@ function App() {
           <Route exact path="/filaments">
             <Filaments />
           </Route>
+          <Route exact path="/createPrinter">
+            <CreatePrinter />
+          </Route>
         </Switch>
-        <button className="btn btn-submit">SUBMIT</button>
+
         <button className="btn btn-default">Kliknij mnie</button>
       </div>
     </Router>

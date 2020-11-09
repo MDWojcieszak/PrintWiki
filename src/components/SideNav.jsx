@@ -18,33 +18,39 @@ const SideNav = (props) => {
         setPs(false);
         setF(false);
         setFs(false);
+        setRu(true);
         break;
       case "2":
         setP(false);
         setPs(true);
         setF(false);
         setFs(false);
+        setRu(true);
         break;
       case "3":
         setP(false);
         setPs(false);
         setF(true);
         setFs(false);
+        setRu(true);
         break;
       case "4":
         setP(false);
         setPs(false);
         setF(false);
         setFs(true);
+        setRu(true);
         break;
+      default:
     }
   }
   return (
     <div className={ru ? "rolled-up side-nav" : "developed side-nav"}>
       <div className="side-nav-text">
         <div className="top">
-          <img className="logo" src={require("../img/logo.svg")} />
+          <img className="logo" alt="logo" src={require("../img/logo.svg")} />
           <img
+            alt="menu"
             id="0"
             onClick={(e) => onClick(e)}
             className="bars"
@@ -60,7 +66,7 @@ const SideNav = (props) => {
             >
               <span className="title">PRINTERS</span>
               <span className="icon">
-                <img src={require("../img/printer.svg")} />
+                <img alt="printers" src={require("../img/printer.svg")} />
               </span>
             </li>
           </NavLink>
@@ -72,7 +78,10 @@ const SideNav = (props) => {
             >
               <span className="title">PRINTERS SETTINGS</span>
               <span className="icon">
-                <img src={require("../img/printer_settings.svg")} />
+                <img
+                  alt="printers_settings"
+                  src={require("../img/printer_settings.svg")}
+                />
               </span>
             </li>
           </NavLink>
@@ -84,7 +93,7 @@ const SideNav = (props) => {
             >
               <span className="title">FILAMENTS</span>
               <span className="icon">
-                <img src={require("../img/filament.svg")} />
+                <img alt="filaments" src={require("../img/filament.svg")} />
               </span>
             </li>
           </NavLink>
@@ -96,7 +105,10 @@ const SideNav = (props) => {
             >
               <span className="title">FILAMENTS SETTINGS</span>
               <span className="icon">
-                <img src={require("../img/filament_settings.svg")} />
+                <img
+                  alt="filaments_settings"
+                  src={require("../img/filament_settings.svg")}
+                />
               </span>
             </li>
           </NavLink>
