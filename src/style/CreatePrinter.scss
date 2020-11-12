@@ -4,15 +4,83 @@
   margin: auto;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   margin-top: 10%;
+  position: relative;
+  border-radius: 4px;
 }
 .create-printer-form .horizontal-wrapper {
   display: flex;
   flex-direction: row;
-}
-.create-printer-form .vartical-wrapper {
   width: 100%;
-  margin: 10px;
+}
+.create-printer-form .vertical-wrapper {
+  width: 100%;
+  margin: 15px;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.create-printer-form .main-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+.label-more {
+  overflow: hidden;
+  left: 0;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 5px solid #0f9175;
+  transition: all 0.3s ease;
+  text-align: left;
+  animation: label-move 0.5s;
+}
+@keyframes label-move {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes more_info {
+  from {
+    //transform: translateY(-50%);
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    //transform: translateY(0%);
+    opacity: 1;
+    max-height: 20em;
+  }
+}
+.more-info {
+  animation: more_info 2s;
+}
+.label-more span {
+  padding-left: 10px;
+}
+
+.btn-custom {
+  width: 200px;
+  font-size: 16px;
+  height: 35px;
+  margin: 20px;
+  position: absolute;
+  bottom: 15px;
+  cursor: pointer;
+  z-index: 0;
+  background-image: linear-gradient(180deg, #16c7a1, #086972);
+  background-size: 100% 200%;
+  background-position: bottom;
+  color: whitesmoke;
+  transition: all 0.3s ease;
+}
+.btn-custom:hover {
+  background-position: top;
+  transition: all 0.3s ease;
 }

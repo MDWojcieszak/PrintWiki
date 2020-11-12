@@ -3,12 +3,15 @@ import "./selectMenu.scss";
 
 const SelectMenu = (props) => {
   return (
-    <div className="menu">
-      <select>
-        {props.options.map((option) => {
-          return <option value="1">{option}</option>;
+    <div className="select-menu">
+      <span className="select-menu-name">{props.name}</span>
+      <select onChange={(e) => props.value(e.target.options.selectedIndex)}>
+        {props.options.map((option, key) => {
+          return <option value={key}>{option}</option>;
         })}
       </select>
+      <span class="custom-arrow"></span>
+      <span className="line"></span>
     </div>
   );
 };

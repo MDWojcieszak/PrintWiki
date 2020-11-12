@@ -7,7 +7,7 @@ const SideNav = (props) => {
   const [ps, setPs] = React.useState(false);
   const [f, setF] = React.useState(false);
   const [fs, setFs] = React.useState(false);
-  const [ru, setRu] = React.useState(false);
+  const [ru, setRu] = React.useState(true);
   function onClick(e) {
     switch (e.currentTarget.id) {
       case "0":

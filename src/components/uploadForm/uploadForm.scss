@@ -1,3 +1,5 @@
+@import "../../style/App.scss";
+
 .fileContainer {
   margin: 10px;
   width: 200px;
@@ -53,3 +55,17 @@
   transition: all 0.3s ease;
   color: black;
 }
+
+// .chooseFileButton {
+//   width: 140px;
+//   font-weight: 400;
+//   padding-left: 2em;
+//   padding-right: 2em;
+//   background-color: white;
+//   border: 0.1em;
+//   box-shadow: 2px 3px 5px $shadow-color;
+//   border-radius: 1em;
+// }
+// .chooseFileButton:hover {
+//   background: var(--button-submit-hover);
+// }

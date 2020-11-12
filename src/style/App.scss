@@ -107,12 +107,13 @@
   border: 0.1em;
   box-shadow: 2px 3px 5px $shadow-color;
   border-radius: 1em;
+  transition: all 0.3 ease;
 }
 .btn-submit:hover {
-  background: var(--button-submit-hover);
+  //background: var(--button-submit-hover);
 }
 .btn-default {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(8, 7, 7, 0);
   border: 0.1em;
   color: var(--font-main);
   border-style: solid;

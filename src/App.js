@@ -47,7 +47,7 @@ function App() {
           </Route>
         </Switch>
 
-        <button className="btn btn-default">Kliknij mnie</button>
+        {/* <button className="btn btn-default">Kliknij mnie</button> */}
       </div>
     </Router>
   );
