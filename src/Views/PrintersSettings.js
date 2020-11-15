@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { GetData } from "../services/GetData";
 
 const PrintersSettings = () => {
@@ -15,6 +16,9 @@ const PrintersSettings = () => {
   }, [page]);
   return (
     <>
+      <NavLink to="/createPrinterSettings">
+        <button className="btn btn-submit">Create Printer Settings</button>
+      </NavLink>
       <h1>Number of elements: {count}</h1>
       {items.map((item) => {
         return (

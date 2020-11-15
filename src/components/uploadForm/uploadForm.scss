@@ -1,9 +1,9 @@
 @import "../../style/App.scss";
 
 .fileContainer {
-  margin: 10px;
   width: 200px;
   height: 200px;
+  margin: 10px;
   max-height: 200px;
   max-width: 200px;
   padding: 0;
@@ -22,8 +22,8 @@
 }
 .upload_image_container {
   position: relative;
-  margin: 10px;
   width: 200px;
+  margin: 10px;
   height: 200px;
   border-radius: 5px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);

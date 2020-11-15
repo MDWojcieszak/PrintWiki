@@ -1,5 +1,5 @@
 export async function GetData(card) {
-  let ApiUrl = "http://localhost:3000"+card;
+  let ApiUrl = "http://localhost:3000" + card;
   const response = await fetch(ApiUrl, {
     method: "GET",
     headers: {

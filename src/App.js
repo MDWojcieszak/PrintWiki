@@ -8,6 +8,7 @@ import PrintersSettings from "./Views/PrintersSettings";
 import Filaments from "./Views/Filaments";
 import FilamentsSettings from "./Views/FilamentsSettings";
 import CreatePrinter from "./Views/CreatePrinter";
+import CreatePrinterSettings from "./Views/CreatePrinterSettings";
 
 function App() {
   const [darkMode, setDarkMode] = React.useState(getInitialMode);
@@ -44,6 +45,9 @@ function App() {
           </Route>
           <Route exact path="/createPrinter">
             <CreatePrinter />
+          </Route>
+          <Route exact path="/createPrinterSettings">
+            <CreatePrinterSettings />
           </Route>
         </Switch>
 

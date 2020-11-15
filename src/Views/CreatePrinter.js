@@ -4,6 +4,7 @@ import SelectMenu from "../components/selectMenu/SelectMenu";
 import TextArea from "../components/textArea/TextArea";
 import UploadForm from "../components/uploadForm/UploadForm";
 import { DeleteImage, PostImage } from "../services/Image";
+import { PostData } from "../services/PostData";
 import "../style/CreatePrinter.scss";
 
 const CreatePrinter = () => {
@@ -20,6 +21,7 @@ const CreatePrinter = () => {
   const [maxR, setMaxR] = useState("");
   const [finalInfo, setFinalInfo] = useState(false);
   const [extruderNumber, setExtruderNumber] = useState();
+  const [description, setDescription] = useState("");
   const [errors, setErrors] = useState([]);
 
   const onImage = async (photo) => {
@@ -30,7 +32,7 @@ const CreatePrinter = () => {
         PostImage(data).then((res) => {
           console.log(res);
           setImagePath("http://localhost:3000" + res.path + res.fileName);
-          setImageName(res.fileName);
+          setImageName(res.path + res.fileName);
         });
       } catch (err) {
         console.log(err);
@@ -51,6 +53,35 @@ const CreatePrinter = () => {
     if ((maxX != "" && maxY != "" && maxZ != "") || (maxR != "" && maxZ != ""))
       setFinalInfo(true);
   }, [maxX, maxY, maxZ, maxR]);
+  const validateForm = () => {
+    return true;
+  };
+  useEffect(() => {
+    console.log(description);
+  }, [description]);
+  const handleSubmit = () => {
+    if (validateForm) {
+      if (type) {
+        var coordinates = { maxR: maxR, maxZ: maxZ };
+      } else {
+        var coordinates = { maxX: maxX, maxY: maxY, maxZ: maxZ };
+      }
+      const data = {
+        name: name,
+        brand: brand,
+        type: options[type],
+        img_path: imageName,
+        description: description,
+        extruder: {
+          number: extruderNumber,
+        },
+        coordinates: coordinates,
+      };
+      PostData("/printers/create", data).then((res) => {
+        console.log(res);
+      });
+    }
+  };
   return (
     <div className="create-printer-form">
       <div className="main-container">
@@ -131,6 +162,7 @@ const CreatePrinter = () => {
                       value={setMaxZ}
                     ></InputField>
                   </div>
+                  <div className="vertical-wrapper"></div>
                 </>
               )}
             </div>
@@ -144,11 +176,13 @@ const CreatePrinter = () => {
                 value={setExtruderNumber}
                 name="Number of extruders"
               ></SelectMenu>
-              <button className="btn-submit btn-custom">CREATE PRINTER</button>
+              <button className="btn-submit btn-custom" onClick={handleSubmit}>
+                CREATE PRINTER
+              </button>
             </div>
 
             <div className="vertical-wrapper">
-              <TextArea text="Description"></TextArea>
+              <TextArea text="Description" value={setDescription}></TextArea>
             </div>
           </div>
         ) : null}

@@ -4,7 +4,12 @@ import "./textArea.scss";
 const TextArea = (props) => {
   return (
     <div className="text-area">
-      <textarea rows="5"></textarea>
+      <textarea
+        onChange={(e) => {
+          props.value(e.target.value);
+        }}
+        rows="5"
+      ></textarea>
       <span>{props.text}</span>
     </div>
   );
