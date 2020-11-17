@@ -1,7 +1,7 @@
 import React from "react";
 import "./style/App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navBar/NavBar";
 import SideNav from "./components/SideNav";
 import Printers from "./Views/Printers";
 import PrintersSettings from "./Views/PrintersSettings";
@@ -9,6 +9,8 @@ import Filaments from "./Views/Filaments";
 import FilamentsSettings from "./Views/FilamentsSettings";
 import CreatePrinter from "./Views/CreatePrinter";
 import CreatePrinterSettings from "./Views/CreatePrinterSettings";
+import SignIn from "./Views/SignIn";
+import SignUp from "./Views/SignUp";
 
 function App() {
   const [darkMode, setDarkMode] = React.useState(getInitialMode);
@@ -25,11 +27,13 @@ function App() {
     <Router>
       <div className={darkMode ? "App dark-mode" : "App light-mode"}>
         <NavBar
-          onChange={() => setDarkMode((prevMode) => !prevMode)}
-          darkMode={darkMode}
+        //onChange={() => setDarkMode((prevMode) => !prevMode)}
+        //darkMode={darkMode}
         />
         <SideNav />
         <Switch>
+          <Route exact path="/sign-in" component={SignIn} />
+          <Route exact path="/sign-up" component={SignUp} />
           <Route
             exact
             path="/printers-settings"

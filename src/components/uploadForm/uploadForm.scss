@@ -1,6 +1,6 @@
 @import "../../style/App.scss";
 
-.fileContainer {
+.image-uploader {
   width: 200px;
   height: 200px;
   margin: 10px;
@@ -20,7 +20,7 @@
   background: white;
   object-fit: cover;
 }
-.upload_image_container {
+.image-uploader {
   position: relative;
   width: 200px;
   margin: 10px;

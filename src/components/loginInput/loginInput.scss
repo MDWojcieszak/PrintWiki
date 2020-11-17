@@ -1,0 +1,25 @@
+@import "../../style/index.scss";
+
+.login-input {
+  position: relative;
+  width: 80%;
+  height: 45px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 10px var(--dark-shadow),
+    inset -5px -5px 10px var(--light-shadow);
+  overflow: hidden;
+}
+
+.login-input input {
+  position: absolute;
+  left: 50px;
+  width: 70%;
+  max-width: 70%;
+  height: 100%;
+  border: none;
+  background: none;
+  font-size: 16px;
+  outline: none;
+}

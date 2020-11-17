@@ -20,7 +20,7 @@ const CreatePrinter = () => {
   const [maxZ, setMaxZ] = useState("");
   const [maxR, setMaxR] = useState("");
   const [finalInfo, setFinalInfo] = useState(false);
-  const [extruderNumber, setExtruderNumber] = useState();
+  const [extruderNumber, setExtruderNumber] = useState(0);
   const [description, setDescription] = useState("");
   const [errors, setErrors] = useState([]);
 
@@ -73,7 +73,7 @@ const CreatePrinter = () => {
         img_path: imageName,
         description: description,
         extruder: {
-          number: extruderNumber,
+          number: extruderNumber + 1,
         },
         coordinates: coordinates,
       };

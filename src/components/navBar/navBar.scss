@@ -1,0 +1,39 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px 10px 10px;
+  border-bottom-left-radius: 35px;
+  box-shadow: 2px 2px 8px #7e7e7e67;
+}
+.sign-in-btn {
+  height: 40px;
+  box-shadow: 2px 2px 12px #7e7e7e67;
+  right: 0;
+  width: 90px;
+  color: black;
+
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.search {
+  position: relative;
+  width: 300px;
+  background: white;
+  height: 40px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 12px #7e7e7e67;
+  margin-right: 10px;
+}
+.search:hover {
+  cursor: pointer;
+}
+.search::before {
+  content: "Search...";
+  position: absolute;
+  left: 20px;
+  top: 25%;
+}
