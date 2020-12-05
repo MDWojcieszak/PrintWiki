@@ -109,6 +109,14 @@
     -9px -9px 16px var(--light-shadow), inset 9px 9px 10px var(--dark-shadow),
     inset -9px -9px 10px var(--light-shadow);
 }
+.login-form .errors {
+  color: red;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
 .plus {
   top: 70%;
   left: 50%;
@@ -120,7 +128,7 @@
   pointer-events: none;
   color: #3c4856;
 }
-.chooseFileButton::before {
+.avatar .chooseFileButton::before {
   content: "AVATAR";
   position: absolute;
   top: 6px;

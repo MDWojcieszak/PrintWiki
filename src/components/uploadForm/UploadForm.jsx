@@ -21,7 +21,7 @@ const UploadForm = (props) => {
     );
   } else {
     return (
-      <div className="upload_image_container">
+      <div className="fileUploader image-uploader">
         <img className="upload_image" src={props.imagePath} />
         <button className="change_button" onClick={props.changePhoto}>
           Change

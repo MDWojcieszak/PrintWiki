@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import Printer from "../components/printer/Printer";
 import SelectMenu from "../components/selectMenu/SelectMenu";
 import { GetData } from "../services/GetData";
 import { PostData } from "../services/PostData";
 import "../style/Printers.scss";
 
-const Printers = () => {
+const Printers = (props) => {
   const [page, setPage] = useState(() => {
     return 1;
   });
@@ -32,9 +32,11 @@ const Printers = () => {
   }, []);
   return (
     <>
-      <NavLink to="/createPrinter">
-        <button className="btn btn-submit">Create Printer</button>
-      </NavLink>
+      {props.userLogin ? (
+        <NavLink to="/createPrinter">
+          <button className="btn btn-submit">Create Printer</button>
+        </NavLink>
+      ) : null}
 
       <h1>Number of elements: {count}</h1>
       <div className="select-menu-component color-3">
@@ -51,6 +53,7 @@ const Printers = () => {
             name={item.name}
             description={item.description}
             img_path={item.img_path}
+            id={item._id}
           ></Printer>
         );
       })}

@@ -32,7 +32,7 @@ const CreatePrinter = () => {
         PostImage(data).then((res) => {
           console.log(res);
           setImagePath("http://localhost:3000" + res.path + res.fileName);
-          setImageName(res.path + res.fileName);
+          setImageName(res.fileName);
         });
       } catch (err) {
         console.log(err);
@@ -70,7 +70,7 @@ const CreatePrinter = () => {
         name: name,
         brand: brand,
         type: options[type],
-        img_path: imageName,
+        img_path: "/public/img/" + imageName,
         description: description,
         extruder: {
           number: extruderNumber + 1,

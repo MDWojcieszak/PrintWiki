@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { GetData } from "../services/GetData";
 
-const PrintersSettings = () => {
+const PrintersSettings = (props) => {
   const [page, setPage] = useState(() => {
     return 1;
   });
@@ -16,9 +16,11 @@ const PrintersSettings = () => {
   }, [page]);
   return (
     <>
-      <NavLink to="/createPrinterSettings">
-        <button className="btn btn-submit">Create Printer Settings</button>
-      </NavLink>
+      {props.userLogin ? (
+        <NavLink to="/createPrinterSettings">
+          <button className="btn btn-submit">Create Printer Settings</button>
+        </NavLink>
+      ) : null}
       <h1>Number of elements: {count}</h1>
       {items.map((item) => {
         return (
