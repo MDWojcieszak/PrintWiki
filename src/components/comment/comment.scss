@@ -1,0 +1,41 @@
+.comment {
+  width: 90%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+.usr-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 100px;
+}
+.usr-name::after {
+  content: "";
+  position: absolute;
+  left: 100px;
+  right: 20px;
+  border-bottom: 2px solid rgb(25, 173, 25);
+  top: 25px;
+}
+.comment img {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.content {
+  margin-left: 100px;
+  margin-top: 5px;
+}
+.time {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}

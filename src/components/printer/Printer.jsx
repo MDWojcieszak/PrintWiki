@@ -11,7 +11,7 @@ const Printer = (props) => {
           src={"http://localhost:3000" + props.img_path}
         ></img>
         <div className="text">
-          <h1 className="name">{props.name}</h1>
+          <h2 className="name">{props.name}</h2>
           <p className="description">{props.description}</p>
         </div>
       </div>

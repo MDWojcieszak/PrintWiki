@@ -1,4 +1,86 @@
-p {
+@import "./index.scss";
+
+.printer-container {
   width: 80%;
+  position: relative;
   margin: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  box-shadow: 9px 9px 16px var(--dark-shadow),
+    -9px -9px 16px var(--light-shadow);
+  border-radius: 10px;
+}
+
+.card-p {
+  box-shadow: 9px 9px 16px var(--dark-shadow),
+    -9px -9px 16px var(--light-shadow);
+  border-radius: 5px;
+  max-height: 200px;
+  height: 200px;
+  padding-bottom: 10px;
+  min-width: 200px;
+  position: absolute;
+  right: 0;
+}
+.Pname {
+  text-align: left;
+  padding-left: 20px;
+}
+.Pbrand {
+  text-align: left;
+  padding-left: 20px;
+}
+.Pname::before {
+  content: "Name: ";
+}
+.Pbrand::before {
+  content: "Brand: ";
+}
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+.vertical {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+p {
+  text-align: justify;
+  margin: auto;
+}
+.printer_photo {
+  margin: 10px;
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+}
+
+.settings-container {
+  min-width: 200px;
+  font-weight: 700;
+}
+
+.mg-top {
+  margin-top: 40px;
+}
+
+.comment-tag {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  margin: 20px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.comment-tag:after {
+  position: absolute;
+  content: "";
+  border: 1px solid grey;
+  left: 0;
+  right: 10px;
+  top: 20px;
 }

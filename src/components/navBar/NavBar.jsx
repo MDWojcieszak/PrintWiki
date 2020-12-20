@@ -20,7 +20,7 @@ const NavBar = (props) => {
               }}
             >
               <button className="logout-btn" type="submit">
-                Logout
+                
               </button>
             </form>
           </>
@@ -35,7 +35,7 @@ const NavBar = (props) => {
         <div className="search"></div>
 
         <NavLink to="/sign-in">
-          <div className="sign-in-btn">Sign in</div>
+          <div className="sign-in-btn"></div>
         </NavLink>
       </div>
     );
