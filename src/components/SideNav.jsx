@@ -85,6 +85,21 @@ const SideNav = (props) => {
               </span>
             </li>
           </NavLink>
+          <NavLink to="/filaments-settings">
+            <li
+              className={fs ? "selected" : "not-selected"}
+              id="4"
+              onClick={(e) => onClick(e)}
+            >
+              <span className="title">PRINT SETTINGS</span>
+              <span className="icon">
+                <img
+                  alt="filaments_settings"
+                  src={require("../img/print_settings.svg")}
+                />
+              </span>
+            </li>
+          </NavLink>
           <NavLink to="/filaments">
             <li
               className={f ? "selected" : "not-selected"}

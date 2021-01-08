@@ -65,6 +65,6 @@
 .input-field-container input:focus + label::after,
 .input-field-container input:valid + label::after,
 .input-field-container input:hover + label::after {
-  transform: translateX(0%);
+  transform: translateY(0%);
   transition: all 0.3s ease;
 }
